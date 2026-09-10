@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>My Payments</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/tables.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="property.html">
+                🏠 My Property
+            </a>
+
+            <a href="payments.html"
+               class="active">
+                💰 Payments
+            </a>
+
+            <a href="lease.html">
+                📄 My Lease
+            </a>
+
+            <a href="../communication/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>My Payments</h1>
+
+                <p>
+                    View your rental payment history
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="dashboard-section">
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Month</th>
+                            <th>Property</th>
+                            <th>Amount</th>
+                            <th>Payment Date</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tenantPaymentTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/tenant.js"></script>
+
+</body>
+</html>

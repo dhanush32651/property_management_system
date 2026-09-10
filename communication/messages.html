@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Messages</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="../owner/dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="../owner/properties.html">
+                🏠 Properties
+            </a>
+
+            <a href="../owner/tenants.html">
+                👥 Tenants
+            </a>
+
+            <a href="../owner/payments.html">
+                💰 Payments
+            </a>
+
+            <a href="../owner/leases.html">
+                📄 Leases
+            </a>
+
+            <a href="messages.html"
+               class="active">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                🏠 Home
+            </a>
+
+            <a href="../login.html">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Messages</h1>
+
+                <p>
+                    Communication between owners and tenants
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="message-section">
+
+
+            <div class="conversation-list">
+
+
+                <h3>Conversations</h3>
+
+
+                <div class="conversation active">
+
+                    <img
+                        src="../assets/images/tenant.jpg"
+                        alt="Rahul"
+                    >
+
+                    <div>
+
+                        <strong>
+                            Rahul Kumar
+                        </strong>
+
+                        <small>
+                            Green Villa
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="conversation">
+
+                    <img
+                        src="../assets/images/tenant.jpg"
+                        alt="Priya"
+                    >
+
+                    <div>
+
+                        <strong>
+                            Priya Sharma
+                        </strong>
+
+                        <small>
+                            Lake View House
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+
+            <div class="chat-area">
+
+
+                <div class="chat-header">
+
+                    <div>
+
+                        <strong>
+                            Rahul Kumar
+                        </strong>
+
+                        <small>
+                            Green Villa
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages">
+
+
+                    <div class="message received">
+
+                        <p>
+                            Hello sir, can I pay my rent tomorrow?
+                        </p>
+
+                        <small>
+                            10:20 AM
+                        </small>
+
+                    </div>
+
+
+                    <div class="message sent">
+
+                        <p>
+                            Yes Rahul, that is fine.
+                        </p>
+
+                        <small>
+                            10:25 AM
+                        </small>
+
+                    </div>
+
+
+                </div>
+
+
+                <form id="messageForm"
+                      class="message-form">
+
+                    <input
+                        type="text"
+                        id="messageInput"
+                        placeholder="Type your message..."
+                        required
+                    >
+
+                    <button type="submit">
+                        Send
+                    </button>
+
+                </form>
+
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+
+</body>
+</html>

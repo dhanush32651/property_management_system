@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Properties</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/properties.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">
+                📊 Dashboard
+            </a>
+
+            <a href="properties.html"
+               class="active">
+                🏠 Properties
+            </a>
+
+            <a href="tenants.html">
+                👥 Tenants
+            </a>
+
+            <a href="payments.html">
+                💰 Payments
+            </a>
+
+            <a href="leases.html">
+                📄 Leases
+            </a>
+
+            <a href="../communication/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                🏠 Home
+            </a>
+
+            <a href="../login.html"
+               onclick="logout()">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Properties</h1>
+
+                <p>
+                    Manage your properties
+                </p>
+
+            </div>
+
+
+            <a
+                href="add-property.html"
+                class="primary-button">
+                + Add Property
+            </a>
+
+        </header>
+
+
+        <section class="dashboard-section">
+
+
+            <div class="search-area">
+
+                <input
+                    type="text"
+                    id="propertySearch"
+                    placeholder="🔍 Search property..."
+                >
+
+                <select id="propertyFilter">
+
+                    <option value="all">
+                        All Properties
+                    </option>
+
+                    <option value="Available">
+                        Available
+                    </option>
+
+                    <option value="Rented">
+                        Rented
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <div
+                id="allProperties"
+                class="property-grid">
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/owner.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Leases</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/tables.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">📊 Dashboard</a>
+
+            <a href="properties.html">🏠 Properties</a>
+
+            <a href="tenants.html">👥 Tenants</a>
+
+            <a href="payments.html">💰 Payments</a>
+
+            <a href="leases.html"
+               class="active">
+                📄 Leases
+            </a>
+
+            <a href="../communication/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">🏠 Home</a>
+
+            <a href="../login.html"
+               onclick="logout()">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Lease Management</h1>
+
+                <p>
+                    Manage active and expired leases
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="dashboard-section">
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Tenant</th>
+                            <th>Property</th>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Rent</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="leaseTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/owner.js"></script>
+
+</body>
+</html>

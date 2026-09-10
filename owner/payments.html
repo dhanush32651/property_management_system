@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Payments</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/tables.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html">📊 Dashboard</a>
+
+            <a href="properties.html">🏠 Properties</a>
+
+            <a href="tenants.html">👥 Tenants</a>
+
+            <a href="payments.html"
+               class="active">
+                💰 Payments
+            </a>
+
+            <a href="leases.html">📄 Leases</a>
+
+            <a href="../communication/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">🏠 Home</a>
+
+            <a href="../login.html"
+               onclick="logout()">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>Rental Payments</h1>
+
+                <p>
+                    Track rental payment activity
+                </p>
+
+            </div>
+
+        </header>
+
+
+        <section class="stats-grid">
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">💰</div>
+
+                <div>
+
+                    <h3 id="totalReceived">
+                        ₹0
+                    </h3>
+
+                    <p>Total Received</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">⏳</div>
+
+                <div>
+
+                    <h3 id="pendingAmount">
+                        ₹0
+                    </h3>
+
+                    <p>Pending Amount</p>
+
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">📅</div>
+
+                <div>
+
+                    <h3 id="paymentRecords">
+                        0
+                    </h3>
+
+                    <p>Payment Records</p>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="dashboard-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Payment History</h2>
+
+                    <p>
+                        Recent rental payments
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Tenant</th>
+                            <th>Property</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="paymentTable">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/owner.js"></script>
+
+</body>
+</html>

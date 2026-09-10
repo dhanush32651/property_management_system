@@ -1,0 +1,45 @@
+.table-container {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+table {
+    min-width: 650px;
+}
+
+table tbody tr:hover {
+    background: #f8fafc;
+}
+
+.table-profile {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+}
+
+.table-profile img {
+    width: 32px;
+
+    height: 32px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.table-profile div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.table-profile small {
+    color: #64748b;
+
+    font-size: 11px;
+}

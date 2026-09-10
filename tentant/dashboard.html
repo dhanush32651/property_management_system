@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Tenant Dashboard</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+    <aside class="sidebar">
+
+        <div class="sidebar-logo">
+
+            <img src="../assets/images/logo.png">
+
+            <span>Property Manager</span>
+
+        </div>
+
+
+        <nav class="sidebar-nav">
+
+            <a href="dashboard.html"
+               class="active">
+                📊 Dashboard
+            </a>
+
+            <a href="property.html">
+                🏠 My Property
+            </a>
+
+            <a href="payments.html">
+                💰 Payments
+            </a>
+
+            <a href="lease.html">
+                📄 My Lease
+            </a>
+
+            <a href="../communication/messages.html">
+                💬 Messages
+            </a>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <a href="../index.html">
+                🏠 Home
+            </a>
+
+            <a href="../login.html"
+               onclick="logout()">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </aside>
+
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div>
+
+                <h1>My Dashboard</h1>
+
+                <p>
+                    Welcome back, Rahul!
+                </p>
+
+            </div>
+
+
+            <div class="profile-area">
+
+                <img
+                    src="../assets/images/tenant.jpg"
+                    alt="Tenant"
+                >
+
+                <div>
+
+                    <strong>Rahul Kumar</strong>
+
+                    <small>
+                        Tenant
+                    </small>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <section class="tenant-property-card">
+
+
+            <div class="tenant-property-image">
+
+                <img
+                    src="../assets/images/villa.jpg"
+                    alt="Green Villa"
+                >
+
+            </div>
+
+
+            <div class="tenant-property-info">
+
+                <p class="small-title">
+                    MY PROPERTY
+                </p>
+
+                <h2>Green Villa</h2>
+
+                <p>📍 Hyderabad</p>
+
+                <div class="tenant-details">
+
+                    <div>
+
+                        <span>Monthly Rent</span>
+
+                        <strong>
+                            ₹25,000
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Property Type</span>
+
+                        <strong>
+                            Villa
+                        </strong>
+
+                    </div>
+
+
+                    <div>
+
+                        <span>Status</span>
+
+                        <strong class="success-text">
+                            Active
+                        </strong>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <section class="dashboard-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <h2>Recent Payments</h2>
+
+                    <p>
+                        Your recent rental payments
+                    </p>
+
+                </div>
+
+
+                <a
+                    href="payments.html"
+                    class="small-button">
+                    View All
+                </a>
+
+            </div>
+
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Month</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Status</th>
+
+                        </tr>
+
+                    </thead>
+
+
+                    <tbody id="tenantRecentPayments">
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/main.js"></script>
+    <script src="../js/tenant.js"></script>
+
+</body>
+</html>
