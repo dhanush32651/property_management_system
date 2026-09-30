@@ -1,4 +1,53 @@
 // =====================================
+// TENANT DASHBOARD
+// =====================================
+
+
+// =====================================
+// GET LOGGED-IN TENANT
+// =====================================
+
+const loggedInUser =
+    JSON.parse(localStorage.getItem("loggedInUser"));
+
+
+// =====================================
+// DISPLAY TENANT NAME
+// =====================================
+
+const tenantName =
+    document.getElementById("tenantName");
+
+const tenantWelcome =
+    document.getElementById("tenantWelcome");
+
+
+if (loggedInUser) {
+
+    // Display user's name
+    if (tenantName) {
+
+        tenantName.textContent =
+            loggedInUser.name;
+
+    }
+
+
+    // Display welcome message
+    if (tenantWelcome) {
+
+        tenantWelcome.textContent =
+            "Welcome back, " +
+            loggedInUser.name +
+            "!";
+
+    }
+
+}
+
+
+
+// =====================================
 // TENANT PAYMENT DATA
 // =====================================
 
@@ -39,6 +88,7 @@ const tenantPayments = [
 ];
 
 
+
 // =====================================
 // FORMAT MONEY
 // =====================================
@@ -46,10 +96,10 @@ const tenantPayments = [
 function tenantMoney(amount) {
 
     return "₹" +
-        Number(amount)
-            .toLocaleString("en-IN");
+        Number(amount).toLocaleString("en-IN");
 
 }
+
 
 
 // =====================================
@@ -65,10 +115,12 @@ const recentPayments =
 if (recentPayments) {
 
     recentPayments.innerHTML =
+
         tenantPayments
             .slice(0, 3)
-            .map(
-                payment => `
+            .map(function (payment) {
+
+                return `
 
                     <tr>
 
@@ -77,9 +129,7 @@ if (recentPayments) {
                         </td>
 
                         <td>
-                            ${tenantMoney(
-                                payment.amount
-                            )}
+                            ${tenantMoney(payment.amount)}
                         </td>
 
                         <td>
@@ -92,11 +142,13 @@ if (recentPayments) {
 
                     </tr>
 
-                `
-            )
+                `;
+
+            })
             .join("");
 
 }
+
 
 
 // =====================================
@@ -112,9 +164,11 @@ const tenantPaymentTable =
 if (tenantPaymentTable) {
 
     tenantPaymentTable.innerHTML =
+
         tenantPayments
-            .map(
-                payment => `
+            .map(function (payment) {
+
+                return `
 
                     <tr>
 
@@ -127,9 +181,7 @@ if (tenantPaymentTable) {
                         </td>
 
                         <td>
-                            ${tenantMoney(
-                                payment.amount
-                            )}
+                            ${tenantMoney(payment.amount)}
                         </td>
 
                         <td>
@@ -142,8 +194,9 @@ if (tenantPaymentTable) {
 
                     </tr>
 
-                `
-            )
+                `;
+
+            })
             .join("");
 
 }

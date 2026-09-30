@@ -1,168 +1,62 @@
-// ===============================
-// LOGIN
-// ===============================
+// Login functionality
 
-const loginForm =
-    document.getElementById("loginForm");
+document.addEventListener("DOMContentLoaded", function () {
 
+    const loginForm = document.getElementById("loginForm");
 
-if (loginForm) {
+    if (!loginForm) {
+        return;
+    }
 
-    loginForm.addEventListener(
-        "submit",
-        function(event) {
+    loginForm.addEventListener("submit", function (event) {
 
-            event.preventDefault();
+        event.preventDefault();
 
+        // Get login values
+        const email = document.getElementById("loginEmail").value.trim();
+        const password = document.getElementById("loginPassword").value;
+        const role = document.getElementById("loginRole").value;
 
-            const email =
-                document.getElementById(
-                    "loginEmail"
-                ).value;
+        // Check empty fields
+        if (email === "" || password === "") {
+            alert("Please enter email and password.");
+            return;
+        }
 
+        // Get registered users from Local Storage
+        const users = JSON.parse(localStorage.getItem("users")) || [];
 
-            const password =
-                document.getElementById(
-                    "loginPassword"
-                ).value;
+        // Find matching user
+        const user = users.find(function (u) {
+            return u.email === email &&
+                   u.password === password &&
+                   u.role === role;
+        });
 
+        // If user exists
+        if (user) {
 
-            const role =
-                document.getElementById(
-                    "loginRole"
-                ).value;
+            // Save logged-in user
+            localStorage.setItem("loggedInUser", JSON.stringify(user));
 
+            alert("Login successful!");
 
-            if (
-                email === "" ||
-                password === ""
-            ) {
-
-                alert(
-                    "Please enter all details."
-                );
-
-                return;
-
-            }
-
-
-            localStorage.setItem(
-                "loggedIn",
-                "true"
-            );
-
-
-            localStorage.setItem(
-                "userRole",
-                role
-            );
-
-
+            // Redirect according to role
             if (role === "owner") {
 
-                window.location.href =
-                    "owner/dashboard.html";
+                window.location.href = "owner/dashboard.html";
 
-            } else {
+            } else if (role === "tenant") {
 
-                window.location.href =
-                    "tenant/dashboard.html";
+                window.location.href = "tenant/dashboard.html";
 
             }
 
+        } else {
+
+            alert("Invalid email, password, or role.");
         }
-    );
 
-}
+    });
 
-
-// ===============================
-// REGISTER
-// ===============================
-
-const registerForm =
-    document.getElementById(
-        "registerForm"
-    );
-
-
-if (registerForm) {
-
-    registerForm.addEventListener(
-        "submit",
-        function(event) {
-
-            event.preventDefault();
-
-
-            const name =
-                document.getElementById(
-                    "registerName"
-                ).value;
-
-
-            const email =
-                document.getElementById(
-                    "registerEmail"
-                ).value;
-
-
-            const password =
-                document.getElementById(
-                    "registerPassword"
-                ).value;
-
-
-            const role =
-                document.getElementById(
-                    "registerRole"
-                ).value;
-
-
-            if (
-                name === "" ||
-                email === "" ||
-                password === ""
-            ) {
-
-                alert(
-                    "Please fill all fields."
-                );
-
-                return;
-
-            }
-
-
-            const user = {
-
-                name: name,
-
-                email: email,
-
-                password: password,
-
-                role: role
-
-            };
-
-
-            localStorage.setItem(
-                "registeredUser",
-                JSON.stringify(user)
-            );
-
-
-            alert(
-                "Registration successful! Please login."
-            );
-
-
-            window.location.href =
-                "login.html";
-
-        }
-    );
-
-}
+});

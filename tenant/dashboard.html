@@ -22,11 +22,16 @@
 <body>
 
 
+    <!-- ============================= -->
+    <!-- SIDEBAR -->
+    <!-- ============================= -->
+
     <aside class="sidebar">
 
         <div class="sidebar-logo">
 
-            <img src="../assets/images/logo.png">
+            <img src="../assets/images/logo.png"
+                 alt="Property Manager Logo">
 
             <span>Property Manager</span>
 
@@ -75,8 +80,15 @@
     </aside>
 
 
+
+    <!-- ============================= -->
+    <!-- MAIN DASHBOARD -->
+    <!-- ============================= -->
+
     <main class="dashboard-main">
 
+
+        <!-- HEADER -->
 
         <header class="dashboard-header">
 
@@ -84,12 +96,14 @@
 
                 <h1>My Dashboard</h1>
 
-                <p>
+                <p id="tenantWelcome">
                     Welcome back, Rahul!
                 </p>
 
             </div>
 
+
+            <!-- PROFILE -->
 
             <div class="profile-area">
 
@@ -100,7 +114,9 @@
 
                 <div>
 
-                    <strong>Rahul Kumar</strong>
+                    <strong id="tenantName">
+                        Rahul Kumar
+                    </strong>
 
                     <small>
                         Tenant
@@ -112,6 +128,11 @@
 
         </header>
 
+
+
+        <!-- ============================= -->
+        <!-- MY PROPERTY -->
+        <!-- ============================= -->
 
         <section class="tenant-property-card">
 
@@ -136,7 +157,9 @@
 
                 <p>📍 Hyderabad</p>
 
+
                 <div class="tenant-details">
+
 
                     <div>
 
@@ -170,6 +193,7 @@
 
                     </div>
 
+
                 </div>
 
             </div>
@@ -177,6 +201,11 @@
 
         </section>
 
+
+
+        <!-- ============================= -->
+        <!-- RECENT PAYMENTS -->
+        <!-- ============================= -->
 
         <section class="dashboard-section">
 
@@ -197,10 +226,13 @@
                 <a
                     href="payments.html"
                     class="small-button">
+
                     View All
+
                 </a>
 
             </div>
+
 
 
             <div class="table-container">
@@ -212,8 +244,11 @@
                         <tr>
 
                             <th>Month</th>
+
                             <th>Amount</th>
+
                             <th>Date</th>
+
                             <th>Status</th>
 
                         </tr>
@@ -222,6 +257,9 @@
 
 
                     <tbody id="tenantRecentPayments">
+
+                        <!-- JavaScript will insert payments here -->
+
                     </tbody>
 
                 </table>
@@ -235,8 +273,16 @@
     </main>
 
 
+
+    <!-- ============================= -->
+    <!-- JAVASCRIPT -->
+    <!-- ============================= -->
+
     <script src="../js/main.js"></script>
+
     <script src="../js/tenant.js"></script>
 
+
 </body>
+
 </html>
